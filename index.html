@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        
+        <meta charset="utf-8">
+        <title>Assignment 1</title>
+    
+    </head>
+
+    <script type="text/javascript">
+        
+        function currenyCalc()
+            {
+                var pesos= parseFloat(17.55)
+                var yuan= parseFloat(6.51)
+                var euro= parseFloat(0.90)
+                var newAmount= document.getElementById('txtCurrency').value;
+                var moneyVal= document.getElementById('moneyType').value;
+                
+                var newPeso=(newAmount * 17.55).toFixed(2);
+                var newYuan=(newAmount * 6.51).toFixed(2);
+                var newEuro=(newAmount * 0.90).toFixed(2);
+                
+                if (moneyVal === 'pesos')
+                {
+                    alert(newPeso);
+                }
+                else if(moneyVal === 'yuan')
+                {
+                    alert(newYuan);
+                }
+                else if(moneyVal === 'euro')
+                {
+                    alert(newEuro);
+                }
+            }
+        
+    </script>
+    
+    <body>
+        
+        <div id='header' style="color:#0000ff;">
+            
+            <p> Currency Calculator</p>
+            
+            <img src="calc.jpg" width="500" height="340" alt="calculator"/>
+        
+        </div>
+        
+        <div id='main_content' style="color:#227722">
+            
+            <p>Currency Amount:
+            <input type="text" id="txtCurrency">
+            </p>
+            
+            <select id="moneyType">
+                <option value="pesos">Pesos</option>
+                <option value="yuan">Chinese Yuan</option>
+                <option value="euro">Euro</option>
+            </select>
+        
+            <input type="button" value="Calculate" name="btnSubmit" onclick="currenyCalc()">
+        
+        </div>
+    
+    </body>
+
+</html>
